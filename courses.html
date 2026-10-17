@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="icon" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Scales Thesaurus - Courses</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <script src="theme-init.js"></script>
+    <style>
+        /* Styles for the courses page */
+        .courses-container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 20px auto;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .courses-container h1 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Slightly larger cards */
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .course-item {
+            border: 1px solid var(--border-color);
+            border-radius: 8px; /* More rounded corners */
+            background-color: var(--bg-color);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden; /* Ensure image corners are rounded */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .course-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-image {
+            height: 180px;
+            background-color: var(--secondary-color); /* Placeholder background */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+        }
+         /* Placeholder for actual image */
+         .course-image span {
+             background: rgba(0,0,0,0.2);
+             padding: 5px 10px;
+             border-radius: 4px;
+         }
+
+        .course-details {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .course-details h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.3em;
+            color: var(--primary-color);
+        }
+
+        .course-details p {
+            margin: 0 0 15px 0; /* More space below description */
+            font-size: 0.95em;
+            color: var(--text-color);
+            line-height: 1.5;
+            /* Limit description lines */
+            display: -webkit-box;
+            -webkit-line-clamp: 4; /* Show max 4 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex-grow: 1; /* Allow description to take available space */
+        }
+
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .course-meta span {
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        .enroll-button {
+            padding: 10px 18px;
+            font-size: 1em;
+            color: var(--button-text);
+            background-color: var(--accent-color);
+            width: 100%; /* Full width button */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            text-align: center;
+            margin-top: auto; /* Push button to the bottom */
+            display: block; /* Ensure link takes full width */
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .enroll-button:hover {
+            background-color: var(--secondary-color);
+            opacity: 0.9;
+        }
+
+        .course-bar { height: 6px; background: var(--border-color); border-radius: 3px; overflow: hidden; margin-bottom: 12px; }
+        .course-bar i { display: block; height: 100%; background: var(--accent-color); }
+        .course-steps { margin: 0 0 12px; padding-left: 22px; font-size: 0.9em; line-height: 1.7; }
+        .course-steps a { color: var(--text-color); }
+        .course-steps small { opacity: 0.6; }
+        .course-steps li.done a { text-decoration: line-through; opacity: 0.65; }
+        .course-steps li.done::marker { content: '✓  '; color: var(--accent-color); }
+        .course-item:has(.course-more:not([hidden])) { grid-column: 1 / -1; }
+        .course-learn { margin: 0 0 10px; padding-left: 20px; font-size: 0.9em; }
+        .course-pv { background: none; border: none; color: var(--accent-color); cursor: pointer; font-size: 0.8em; padding: 0; text-decoration: underline; }
+        .course-fb { margin-bottom: 12px; }
+        .course-actions { display: flex; gap: 8px; }
+        .course-actions .enroll-button { flex: 1; width: auto; }
+        .course-toggle { padding: 10px 14px; border: 1px solid var(--border-color); background: transparent; color: var(--text-color); border-radius: 4px; cursor: pointer; }
+        .return-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .return-button:hover {
+            background-color: var(--secondary-color);
+        }
+    </style>
+    <link rel="stylesheet" href="mini-fretboard.css">
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="courses-page.css">
+    <script src="site.js" defer></script>
+</head>
+<body>
+    <header class="top-header">
+        <div class="top-header-content">
+            <a class="site-brand" href="index.html" aria-label="Scales Thesaurus home">Scales Thesaurus</a>
+            <nav class="header-nav" aria-label="Main navigation"></nav>
+            <div class="sidebar-toggle-container">
+                <a class="courses-app-link" href="fretboard.html">Open Fretboard</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="courses-container">
+        <h1>Music Theory & Instrument Courses</h1>
+        <div class="course-list" id="course-list"></div>
+    </div>
+
+    <script src="music-theory-data.js"></script>
+    <script src="scales-data-standard.js"></script>
+    <script src="scales-data-numeric.js"></script>
+    <script src="scales-data-advanced-1.js"></script>
+    <script src="scales-data-advanced-2.js"></script>
+    <script src="scales-data-advanced-3.js"></script>
+    <script src="scales-data-advanced-4.js"></script>
+    <script src="scales-data-advanced-5.js"></script>
+    <script src="scales-data-advanced-6.js"></script>
+    <script src="scales-data-advanced-7a.js"></script>
+    <script src="scales-data-advanced-7b.js"></script>
+    <script src="scales-data-advanced-8.js"></script>
+    <script src="scales-data-advanced-10.js"></script>
+    <script src="scales-data-advanced-11.js"></script>
+    <script src="music-theory.js"></script>
+    <script src="music-theory-logic.js"></script>
+    <script src="music-theory-chords.js"></script>
+    <script src="music-theory-descriptions.js"></script>
+    <script src="mini-fretboard.js"></script>
+    <script src="courses-app.js"></script>
+</body>
+</html>
