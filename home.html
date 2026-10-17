@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#2c3e50">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Scales Thesaurus</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="theme-init.js"></script>
+    <script src="site.js" defer></script>
+</head>
+<body>
+    <header class="top-header">
+        <div class="top-header-content">
+            <nav class="header-nav" aria-label="Main navigation"></nav>
+            <div class="sidebar-toggle-container">
+                <button id="sidebar-toggle" aria-expanded="false" title="Open interactive fretboard" onclick="window.location.href='fretboard.html'">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="sr-only">Open interactive fretboard</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-container">
+        <section class="home-hero" aria-labelledby="home-title">
+            <div class="home-hero-copy">
+                <p class="home-eyebrow"><span class="home-eyebrow-mark" aria-hidden="true"></span> A WORKSPACE FOR MUSICAL CURIOSITY</p>
+                <h2 id="home-title">Manic Rules - Learn Music</h2>
+                <p class="home-intro">Explore the fretboard, shape a progression, or follow an idea wherever it leads.</p>
+                <a class="home-primary-link" href="fretboard.html">Open the fretboard <span aria-hidden="true">+</span></a>
+            </div>
+            <div class="home-hero-art" aria-hidden="true">
+                <div class="home-art-orbit home-art-orbit-one"></div>
+                <div class="home-art-orbit home-art-orbit-two"></div>
+                <div class="home-art-note home-art-note-one">C</div>
+                <div class="home-art-note home-art-note-two">G</div>
+                <div class="home-art-note home-art-note-three">Am</div>
+                <div class="home-art-line home-art-line-one"></div>
+                <div class="home-art-line home-art-line-two"></div>
+                <div class="home-art-line home-art-line-three"></div>
+                <div class="home-art-line home-art-line-four"></div>
+                <div class="home-art-line home-art-line-five"></div>
+                <span class="home-art-caption">KEY / C MAJOR</span>
+            </div>
+            <div class="home-hero-index" aria-hidden="true"><span>01</span><span class="home-index-rule"></span><span>EXPLORE</span></div>
+        </section>
+
+
+        <section class="home-section home-featured" aria-labelledby="featured-heading">
+            <div class="home-section-heading"><div><p class="home-section-kicker">START MAKING</p><h2 id="featured-heading">Play!</h2></div><span class="home-section-note">Play, build, practice</span></div>
+            <div class="home-feature-grid">
+                <a class="home-feature-card home-feature-fretboard" href="fretboard.html">
+                    <span class="home-card-index">01 / PLAY</span>
+                    <h3>Interactive Fretboard</h3><p>See scales, chords and intervals on the neck. Play patterns and export diagrams.</p>
+                    <span class="home-card-action">Open fretboard <span aria-hidden="true">+</span></span>
+                </a>
+                <a class="home-feature-card home-feature-daw" href="daw.html">
+                    <span class="home-card-index">02 / BUILD</span>
+                    <h3>Pattern Studio</h3><p>Arrange musical ideas, hear your progression and export it as MIDI.</p>
+                    <span class="home-card-action">Open studio <span aria-hidden="true">+</span></span>
+                </a>
+                <a class="home-feature-card home-feature-progression" href="dummy.html">
+                    <span class="home-card-index">03 / CONNECT</span>
+                    <h3>Chord Progressions</h3><p>Build a progression from any key, then hear it and transpose it instantly.</p>
+                    <span class="home-card-action">Build a progression <span aria-hidden="true">+</span></span>
+                </a>
+                <a class="home-feature-card home-feature-decks" href="theory-decks/index.html">
+                    <span class="home-card-index">04 / PRACTICE</span>
+                    <h3>Theory Decks</h3><p>Explore guitar theory cards, a creative DAW, fretboard tools and focused practice games.</p>
+                    <span class="home-card-action">Open the Theory Decks studio <span aria-hidden="true">+</span></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="explore-heading">
+            <div class="home-section-heading"><div><p class="home-section-kicker">FIND A SOUND</p><h2 id="explore-heading">Explore theory</h2></div><span class="home-section-note">Browse the building blocks</span></div>
+            <div class="home-link-grid">
+                <a class="home-link-card" href="scales.html"><span class="home-link-symbol" aria-hidden="true">01</span><span><h3>Scales</h3><p>Browse scale formulas, spellings and fretboard views.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="chords.html"><span class="home-link-symbol" aria-hidden="true">02</span><span><h3>Chords</h3><p>Find voicings, chord tones and related scales.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="intervals.html"><span class="home-link-symbol" aria-hidden="true">03</span><span><h3>Intervals</h3><p>Hear and compare the distances between notes.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="data.html"><span class="home-link-symbol" aria-hidden="true">04</span><span><h3>Application Data</h3><p>Inspect and export the theory behind the tools.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+            </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="learn-heading">
+            <div class="home-section-heading"><div><p class="home-section-kicker">KEEP GOING</p><h2 id="learn-heading">Learn &amp; practice</h2></div><span class="home-section-note">From first steps to focused drills</span></div>
+            <div class="home-link-grid">
+                <a class="home-link-card" href="courses.html"><span class="home-link-symbol" aria-hidden="true">01</span><span><h3>Courses</h3><p>Follow a structured path through music theory.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="lessons.html"><span class="home-link-symbol" aria-hidden="true">02</span><span><h3>Music Lessons</h3><p>Step-by-step tutorials with interactive diagrams.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="practice.html"><span class="home-link-symbol" aria-hidden="true">03</span><span><h3>Practice Room</h3><p>Build a routine with drills and ear training.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="theory-cards/index.html"><span class="home-link-symbol" aria-hidden="true">04</span><span><h3>Theory Cards</h3><p>Review essential ideas with quick flashcards.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="coursesquizzes.html"><span class="home-link-symbol" aria-hidden="true">05</span><span><h3>Quizzes &amp; Exams</h3><p>Test what you know with generated assessments.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="ebooks.html"><span class="home-link-symbol" aria-hidden="true">06</span><span><h3>Theory eBooks</h3><p>Make focused PDF guides for your next session.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+            </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="workspace-heading">
+            <div class="home-section-heading"><div><p class="home-section-kicker">YOUR SPACE</p><h2 id="workspace-heading">Keep your ideas close</h2></div><span class="home-section-note">Saved on this device</span></div>
+            <div class="home-link-grid home-link-grid-personal">
+                <a class="home-link-card" href="favorites.html"><span class="home-link-symbol" aria-hidden="true">01</span><span><h3>Your Favorites</h3><p>Return to saved scales, chords and diagrams.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="progress.html"><span class="home-link-symbol" aria-hidden="true">02</span><span><h3>Learning Progress</h3><p>See lessons, practice and recent activity.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="coursesideas.html"><span class="home-link-symbol" aria-hidden="true">03</span><span><h3>Ideas &amp; Notes</h3><p>Keep a private notebook for musical ideas.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+                <a class="home-link-card" href="settings.html"><span class="home-link-symbol" aria-hidden="true">04</span><span><h3>Settings</h3><p>Personalize themes, defaults and audio.</p></span><span class="home-link-arrow" aria-hidden="true">+</span></a>
+            </div>
+        </section>
+
+        <footer class="home-footer"><span>Scales Thesaurus</span><div><a href="about.html">About</a><a href="release-notes.html">Release notes</a></div><span>Make something musical.</span></footer>
+    </main>
+    <script src="vendor/jszip.min.js"></script>
+    <script src="offline-package.js"></script>
+</body>
+</html>

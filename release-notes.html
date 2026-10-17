@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="icon" href="icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Release Notes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="themes.css">
+    <script src="theme-init.js"></script>
+    <link rel="stylesheet" href="release-notes.css">
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js" defer></script>
+</head>
+<body>
+    <div class="top-header">
+        <div class="top-header-content">
+            
+            <div class="header-nav">
+                <a href="home.html" class="header-link">Home</a>
+                <a href="scales.html" class="header-link">Scales</a>
+                <a href="chords.html" class="header-link">Chords</a>
+                <a href="intervals.html" class="header-link">Intervals</a>
+                <a href="ebooks.html" class="header-link">eBooks</a>
+                <a href="progress.html" class="header-link">Progress</a>
+                <a href="favorites.html" class="header-link">Favorites</a>
+                <a href="data.html" class="header-link">Data</a>
+                <a href="about.html" class="header-link">About</a>
+            </div>
+            <div class="sidebar-toggle-container">
+                <button id="sidebar-toggle" aria-expanded="false" onclick="window.location.href='fretboard.html'">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="sr-only">Go to App</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <main class="rn">
+        <h1>Scales Thesaurus 3.2 Theta</h1>
+        <p class="rn-meta">Release Theta 3.2 &middot; October 2026 &middot; <span id="rn-status">checking offline status…</span></p>
+        <div class="rn-package-action">
+            <button class="offline-package-button" type="button">Download Offline ZIP</button>
+            <span class="offline-package-status" role="status" aria-live="polite">Complete the offline cache before downloading the archive.</span>
+        </div>
+
+        <nav class="rn-toc" aria-label="Release notes sections">
+            <a href="#new">Highlights</a><a href="#daw">Pattern Studio</a><a href="#mobile">Mobile View</a><a href="#design">Design</a><a href="#capabilities">Capabilities</a><a href="#application">Application</a><a href="#how-to">How to</a><a href="#faq">FAQ</a><a href="#troubleshooting">Troubleshooting</a><a href="#cheat-sheet">Cheat sheet</a><a href="#offline">Offline &amp; install</a><a href="#fixes">Fixes</a><a href="#limitations">Limitations</a>
+        </nav>
+
+        <section id="new">
+            <h2>Release Theta 3.2</h2>
+            <p>This release adds Pattern Studio, a local DAW-style arrangement editor with 500 preloaded patterns and custom interval, chord and scale blocks. The complete app and offline ZIP use bundled assets and local audio; no network service is required after the first full HTTPS cache install. See <a href="#offline">Offline &amp; installation</a> for browser-specific notes.</p>
+            <h3>Earlier highlights</h3>
+            <ul>
+                <li><b>Home is the default:</b> the root page and installed app open the Home dashboard; the interactive instrument now has its own Fretboard destination.</li>
+                <li><b>Playback controls:</b> Play and Stop sit together in the fretboard header. Stop releases current audio and cancels the remaining scale sequence.</li>
+                <li><b>Hear in place:</b> scale, chord and interval previews play locally on their explorer pages without navigating to the fretboard.</li>
+                <li><b>Base-0 reference:</b> scales, chords and intervals show pitch-class numbers from 0 to 11, with C as 0.</li>
+                <li><b>Study library:</b> 600 data-backed cards were added (612 total), lesson views now include outcomes and applied checks, and the on-device eBook catalog doubled from 50 to 100 guides.</li>
+                <li><b>Pattern Studio DAW:</b> arrange intervals, chords and scales, play them locally, search 500 preloaded patterns and save custom sequences on this device.</li>
+                <li><b>Local synthesis:</b> fretboard, explorers and Pattern Studio use bundled audio synthesis and require a tap or click to start.</li>
+                <li><b>Offline ZIP:</b> download the complete versioned app archive from Home or Release Notes after the offline-ready marker appears. The archive is generated on-device using the bundled ZIP library.</li>
+                <li><b>Offline-first app.</b> Once the complete cache is ready, local pages, audio and exports work without a network connection. The ZIP download packages every precached project file.</li>
+                <li><b>MIDI ZIP exports</b> of all Pattern Studio patterns and all fretboard scales, chords and intervals across 12 keys, with individual files and a compiled MIDI; PNG, PDF, Word, CSV and other local exports remain available.</li>
+                <li><b>Courses</b> that chain lessons, fretboard views, eBooks, quizzes, tests and exams, with progress.</li>
+                <li><b>Quizzes, timed tests and graded exams</b> with endless generated questions and a PDF certificate.</li>
+                <li><b>Chord Progressions</b> builder: diatonic chords in any major or minor key, presets, playback and instant transposition.</li>
+                <li><b>100 PDF eBooks</b> generated on your device, each with a pattern-specific formula, fretboard map and guided practice.</li>
+                <li><b>Interactive fretboards everywhere you learn:</b> every lesson now has its full explanation, formula, spelling, step pattern, practice steps and related patterns on the Lessons page; courses, quiz feedback, the Practice Room drill and the Chord Progressions builder all show a playable diagram (guitar, bass, ukulele, drop D).</li>
+                <li><b>Ideas &amp; Notes sandbox:</b> draft freely and sketch shapes on a clickable fretboard that names the notes and matching chords/scales; diagrams are saved with the note.</li>
+                <li><b>Diagram label settings:</b> choose which details (instrument, tuning, key, type, name, formula) are printed on every exported image, including all "Save All … as ZIP" exports. Find them in the Export footer under <i>Diagram label</i>.</li>
+                <li><b>Practice Room drill</b> with a random key/pattern, metronome and session timer.</li>
+                <li><b>Favorites</b>, <b>Progress</b> (streak, heatmap, results) and <b>Ideas &amp; Notes</b> pages that now actually work.</li>
+                <li>One consistent, icon-first navigation bar on every page; phone menus keep destination labels.</li>
+                <li>Fresh tabs start in Desktop View; a tab-scoped mobile preview carries across app pages.</li>
+                <li>Full backup and restore of everything you have saved.</li>
+            </ul>
+        </section>
+
+        <section id="daw">
+            <h2>Pattern Studio DAW</h2>
+            <p>The local Pattern Studio contains 500 preloaded progressions and exercises spanning all 12 keys, drawn from 42 musical forms built with the bundled interval, chord and scale catalogs. The library and audio engine run without a network connection after the app cache is ready.</p>
+            <ol>
+                <li>Choose a preloaded pattern, search by name, and tap Load. Set the key and tempo for the arrangement.</li>
+                <li>To write your own, choose a chord, scale or interval, select its catalog reference, choose a root degree and bar length, then tap Add to arrangement.</li>
+                <li>Move blocks up or down, remove them, and combine any source types in one sequence. Play starts local synthesis; Stop cancels scheduled notes.</li>
+                <li>Name a pattern and save it to this browser. Open or delete saved patterns in the On this device section.</li>
+                <li>Export All MIDI (ZIP) packages individual files for the 500-pattern library, saved patterns and the current arrangement, plus one compiled MIDI with section markers. This uses the bundled ZIP library and works offline.</li>
+            </ol>
+            <p>Saved patterns stay in this browser profile on this device. Use the app backup tools before changing devices; the DAW does not send patterns to a server.</p>
+        </section>
+
+        <section id="mobile">
+            <h2>Mobile View</h2>
+            <ol>
+                <li>The start page prioritizes app launches, while safe-area-aware navigation keeps key actions reachable.</li>
+                <li>The fretboard settings sidebar becomes a bottom sheet, with a wide, swipeable instrument diagram.</li>
+                <li>Scale, chord and interval filters use touch-sized, horizontally browsable interval chips.</li>
+                <li>Explorer result cards and their play, favorite and diagram actions have larger tap targets.</li>
+                <li>Data editor tabs stay in reach, and wide tables scroll without shrinking editable values.</li>
+                <li>Course cards and quiz answers use single-column layouts with clearer progress and action states.</li>
+                <li>The Practice Room groups BPM, metronome and session controls into a thumb-friendly control pad.</li>
+                <li>Progress cards, heatmap and results table are sized for glanceable stats and deliberate horizontal swipes.</li>
+                <li>Theory Cards, lesson details and eBook covers shift to focused, readable phone layouts.</li>
+                <li>Favorites, notes, settings and chord-building controls stack into touch-first workspaces.</li>
+            </ol>
+            <p>All mobile layouts, scripts and styles are local and included in the offline cache.</p>
+            <p><b>Orientation:</b> mobile devices default to landscape, with a persistent Portrait button in the page header. Installed Android browsers use the PWA landscape preference; iPhone uses the local rotated layout fallback where orientation locking is unavailable. The separate Mobile View switch remains an optional compact preview.</p>
+            <p><b>Navigation and offline:</b> the compact layout preference carries across pages in the current tab. Direct Theory Cards visits register the app-root service worker and use locally cached scripts and styles.</p>
+        </section>
+
+        <section id="capabilities">
+            <h2>Capabilities</h2>
+            <div class="rn-grid">
+                <div><h3>Reference</h3><p>1,306 scales, 315 chords and 14 intervals with formulas, spellings in every key, descriptions, related modes and inversions.</p></div>
+                <div><h3>Instruments</h3><p>Guitar, bass, piano and custom instruments with any tuning, string count and fret span; note-name or interval display; dozens of themes.</p></div>
+                <div><h3>Pattern Studio</h3><p>A DAW-style sequence editor with 500 preloaded forms, interval/chord/scale blocks, local playback, tempo control and device-local saves.</p></div>
+                <div><h3>Listen</h3><p>Play the current scale, chord, interval or custom pattern from the fretboard header; melodic sequences, slideshows and progressions also use built-in synthesis.</p></div>
+                <div><h3>Learn</h3><p>50 lessons with interactive diagrams and guided practice, 4 courses, 8 quizzes, 6 timed tests, 3 exams, 100 eBooks, a chord progression builder, a practice drill and a notes sandbox.</p></div>
+                <div><h3>Export</h3><p>PNG, PDF, Word (.docx), ZIP batches, Excel, CSV and JSON - all generated on your device.</p></div>
+                <div><h3>Customise</h3><p>Create your own patterns, edit the data tables, save instrument presets and set defaults.</p></div>
+                <div><h3>Offline</h3><p>First-party pages, catalog data, Pattern Studio playback and bundled libraries are precached for use after a completed HTTPS visit.</p></div>
+            </div>
+            <p>The <a href="about.html">About</a> page lists all 140 features and where to find them.</p>
+        </section>
+
+        <section id="use-cases">
+            <h2>Use cases</h2>
+            <ul>
+                <li><b>Guitarists and bassists</b> mapping scales and arpeggios over the whole neck in any tuning.</li>
+                <li><b>Teachers</b> printing handouts: a scale in all 12 keys, a slideshow of chords or a full eBook, ready as PDF.</li>
+                <li><b>Students</b> working through a course and proving it with an exam certificate.</li>
+                <li><b>Songwriters</b> sketching and hearing chord progressions, then transposing them to a singer's key.</li>
+                <li><b>Improvisers</b> exploring modes, exotic and jazz scales and comparing their sound.</li>
+                <li><b>Offline practice</b> on a plane, in a rehearsal room or anywhere without signal.</li>
+            </ul>
+        </section>
+
+        <section id="design">
+            <h2>Design</h2>
+            <p>The desktop header uses a compact row of familiar icons and a dedicated Play control to keep core actions visible without crowding the fretboard. Each icon has an accessible name and a tooltip. On phones, Menu expands the same destinations with text labels and touch-sized targets.</p>
+            <p>Page layouts follow their task: explorers prioritize filters and results, lessons and eBooks prioritize reading, practice pages prioritize controls, and data pages preserve wide tables through horizontal scrolling. Mobile View is an opt-in preview for the current tab; fresh tabs start in Desktop View. Narrow screens still receive responsive layouts automatically.</p>
+            <p>Icons, styles, scripts, data and audio are local project assets. No icon font, remote font or CDN is required.</p>
+        </section>
+
+        <section id="application">
+            <h2>Application</h2>
+            <ul>
+                <li><b>Explore:</b> map scales, chords and intervals, hear them, save favorites and open fretboard diagrams.</li>
+                <li><b>Learn:</b> follow lessons and courses, take quizzes/tests/exams, practice with a metronome, read eBooks and build progressions.</li>
+                <li><b>My Data:</b> review favorites and progress, edit theory tables, keep local notes and change app defaults.</li>
+                <li><b>Create and export:</b> build and save DAW arrangements from intervals, chords and scales; customize instruments; make local PNG, PDF, Word, ZIP, CSV, Excel and JSON exports.</li>
+            </ul>
+        </section>
+
+        <section id="how-to">
+            <h2>How To</h2>
+            <ol>
+                <li>For PWA offline use, open a root app page over HTTPS while online and wait for the offline-ready notice. To make an archive, use Home or Release Notes → Download Offline ZIP only after the cache is ready.</li>
+                <li>To use the ZIP on a computer or Android browser that permits local HTML scripts, extract the full folder tree and open index.html. Keep all files together; the package includes OFFLINE-START-HERE.txt.</li>
+                <li>Use the header icons on desktop. On a phone, tap Menu to reveal named links. Tap an icon or its label to open that section.</li>
+                <li>Open the Fretboard from Home, choose a key and pattern, then use the header Play or Stop controls. In the scale, chord and interval explorers, Hear plays the selected catalog item on that page; Fretboard opens its diagram.</li>
+                <li>Open Pattern Studio from the global DAW link or Home. Search and load one of 500 patterns, or choose an interval, chord or scale block, set its root and length, then add and arrange it. Set key and BPM, tap Play or Stop, and save named patterns to this device.</li>
+                <li>In the Scales and Chords explorers, search or filter, then Hear plays on the current page, mark a favorite or open Fretboard. Intervals can be filtered by related chords and scales.</li>
+                <li>Use the Mobile View switch to preview the compact layout on a wide screen. The choice carries between pages in the same tab; a new tab starts in Desktop View.</li>
+                <li>Use Settings to export a backup before moving devices or clearing browser data. Favorites, progress and notes stay in this browser.</li>
+            </ol>
+        </section>
+
+        <section id="faq">
+            <h2>FAQ</h2>
+            <h3>Does the app need the internet?</h3>
+            <p>The hosted app needs a first online visit to install its full cache and needs a connection for later updates. After the offline-ready notice, cached pages, data, audio, study content and export libraries work offline. The ZIP packages the same precached files.</p>
+            <h3>What is in the Offline ZIP?</h3>
+            <p>Every file in the service worker precache, plus an offline start guide. Download it after the cache-ready notice. Extract it without changing the folder structure. Local-file execution depends on the browser.</p>
+            <h3>What is Pattern Studio?</h3>
+            <p>A local DAW-style arranger with 500 preloaded chord progressions, scale studies, interval exercises and mixed patterns. Build a custom sequence from the bundled theory catalogs; playback is synthesized on this device.</p>
+            <h3>Are my DAW patterns synced?</h3>
+            <p>No. Saved arrangements are stored in this browser profile on this device. They do not upload or sync; use browser backup practices before changing devices.</p>
+            <h3>Where does the app open?</h3>
+            <p>Home opens by default, including when you launch the installed app. Choose Fretboard to open the interactive instrument.</p>
+            <h3>Do explorer Hear buttons leave the page?</h3>
+            <p>No. Scales, chords and intervals play through the bundled synthesizer on their current page. Allow audio after a tap or click.</p>
+            <h3>What does Base 0 mean?</h3>
+            <p>It numbers pitch classes C=0, C-sharp/D-flat=1, through B=11. Numbers wrap at the octave; a chord or scale shows its distinct pitch classes from the root.</p>
+            <h3>Why is a new tab in Desktop View?</h3>
+            <p>That is the default. An explicit Mobile View selection lasts for the current tab and follows its page navigation.</p>
+            <h3>Where is my saved data?</h3>
+            <p>In local browser storage on this device. Use Settings backup and restore to move it; private browsing or clearing site data may remove it.</p>
+            <h3>Can I export while offline?</h3>
+            <p>Yes. Export libraries are bundled locally and files are generated on the device.</p>
+            <h3>Can I play and stop from the fretboard header?</h3>
+            <p>Yes. Select a scale, chord, interval or custom pattern and tap Play. Stop cancels the remaining sequence and releases active voices.</p>
+            <h3>How many study resources are included?</h3>
+            <p>The Theory Cards deck has 612 cards, and the eBook page offers 100 locally generated PDF guides.</p>
+            <h3>Why might sound be muted on iPhone?</h3>
+            <p>Start playback with a tap, raise media volume and check the hardware silent switch. Browsers require a user gesture before audio starts.</p>
+        </section>
+
+        <section id="troubleshooting">
+            <h2>Troubleshooting</h2>
+            <ul>
+                <li><b>Run the audit:</b> open Fretboard → Sidebar → Quick Actions → Run App Checks. Run it after the offline-ready notice so cache checks reflect a complete install.</li>
+                <li><b>No offline-ready notice or ZIP error:</b> use the hosted HTTPS app, reconnect, reload Home and wait for the cache installation. Private browsing, denied storage or low device space can prevent it.</li>
+                <li><b>ZIP will not open as an app on iPhone:</b> use Safari → Share → Add to Home Screen while online, open that installed app once until offline-ready, then launch it offline. iOS Files previews and local-file script restrictions vary; the ZIP is an archive, not an iOS app installer. For iPhone offline use, install the hosted app from Safari Home Screen while online, then open it once to finish caching.</li>
+                <li><b>An old version opens:</b> reconnect and reload once so the updated service worker can install the new cache; then reopen the app.</li>
+                <li><b>No sound:</b> tap Hear or Play directly in the page, check media volume and the iPhone silent switch, then retry. If audio was interrupted by switching apps, tap playback again to resume the audio context.</li>
+                <li><b>Pattern Studio says a reference is unavailable:</b> reload the hosted app while online so the bundled theory catalog cache completes, then reopen DAW.</li>
+                <li><b>Progress or favorites disappeared:</b> check that you are in the same browser profile and have not cleared site data. Restore a Settings backup if available.</li>
+                <li><b>A table is wider than the screen:</b> swipe horizontally within the table; values are kept readable rather than compressed.</li>
+                <li><b>Installing on a phone:</b> use Samsung Internet's Install/Add to Home Screen option or Safari's Share → Add to Home Screen. Serve over HTTPS; file:// pages cannot install the service worker.</li>
+            </ul>
+        </section>
+
+        <section id="cheat-sheet">
+            <h2>Cheat Sheet</h2>
+            <ul>
+                <li><b>House:</b> Home dashboard. <b>Fretboard:</b> interactive instrument view.</li>
+                <li><b>Stepped notes:</b> Scales. <b>Stacked notes:</b> Chords. <b>Two arrows:</b> Intervals. <b>Cards:</b> Theory Cards.</li>
+                <li><b>Open book:</b> Learn menu. <b>Data grid:</b> My Data menu. <b>Circle i:</b> About. <b>Document:</b> Release Notes/offline status.</li>
+                <li><b>Offline ZIP:</b> Home or Release Notes → Download Offline ZIP, then extract the folder. <b>Fretboard triangle:</b> Play. <b>Square:</b> Stop. <b>DAW:</b> add blocks, arrange, play, save. <b>Base 0:</b> C=0; pitch classes run 0-11. <b>On phones:</b> tap Menu, then the labeled destination.</li>
+                <li><b>Theory Cards:</b> tap the card to flip; use left/right arrows to change cards and Space to flip.</li>
+                <li><b>Save locally:</b> star explorer results. <b>Back up:</b> Settings → Export User Data. <b>Restore:</b> Settings → Import User Data.</li>
+            </ul>
+        </section>
+
+        <section id="offline">
+            <h2>Offline &amp; installation</h2>
+            <ul>
+                <li>Open a root app page over HTTPS while online and wait for "ready to work offline". The worker installs every listed local app asset before it marks the cache ready.</li>
+                <li>Use Download Offline ZIP to save those cached files in their original folder structure. On a computer or Android browser supporting local HTML scripts, extract the archive and open index.html; file:// pages cannot install a service worker, so updates and PWA storage are unavailable there.</li>
+                <li>For iPhone, install the hosted HTTPS site from Safari using Share → Add to Home Screen while online, then open it once to finish caching. Safari local-file policies mean an extracted ZIP is not guaranteed to run from Files.</li>
+                <li>The Release Notes indicator shows online/offline state and whether this version’s cache marker is installed. The DAW, its 500 generated presets and its synthesizer are included in the same local cache.</li>
+                <li>Install it with your browser's <i>Install app</i> or <i>Add to Home Screen</i> option to launch it like a native app.</li>
+                <li>Updates download when you are online and apply through the service worker. Offline use requires completing the current version's install first.</li>
+                <li>Responsive layouts are provided for phones, but physical Samsung/iPhone and airplane-mode testing was not available for this release. Browser/OS policies, storage settings and audio routing can vary.</li>
+                <li>Everything you save stays in this browser. Use <a href="settings.html">Settings</a> &rarr; Backup to keep a copy or move to another device.</li>
+            </ul>
+        </section>
+
+        <section id="fixes">
+            <h2>3.2 fixes and verification</h2>
+            <p>Header playback now reaches the existing local synth, blocks overlapping repeat taps, reports unsupported diagram types, and retries audio startup after interruptions. Release Notes reads the real offline-ready cache marker. These are the issues verified for this release; an audit did not substantiate 50 new defects, so 50 new fixes are not claimed.</p>
+            <p>The release audit checks local asset references, service-worker precache coverage, and cache-to-ZIP completeness. A disconnected reload and physical Samsung/iPhone device tests remain necessary to confirm behavior under their actual browser and storage policies.</p>
+            <h3>Earlier fixes (57)</h3>
+            <ol class="rn-fixes">
+                <li><span class="rn-tag">Theory</span>Interval labels missing from the table (#5, #6, b4, b9, #9, #11, b13, 13) resolved to 0 semitones, so augmented and altered chords were spelled wrong (e.g. C augmented as "C E C").</li>
+                <li><span class="rn-tag">Theory</span>Three semitones were named #2 instead of b3, mislabelling every minor chord and scale.</li>
+                <li><span class="rn-tag">Theory</span>Flat keys (Bb, Eb, Ab, Db, Gb) returned empty scales and chords.</li>
+                <li><span class="rn-tag">Theory</span>Notes are now spelled by scale degree: C minor pentatonic reads C Eb F G Bb and F minor 7 reads F Ab C Eb instead of sharps.</li>
+                <li><span class="rn-tag">Theory</span>Interval lookups failed for flat-spelled notes, breaking playback highlighting in interval display mode.</li>
+                <li><span class="rn-tag">Theory</span>The diminished 7th quiz formula was wrong (b7 instead of bb7).</li>
+                <li><span class="rn-tag">Fretboard</span>Flat-spelled notes (F major's Bb) did not light up on the fretboard.</li>
+                <li><span class="rn-tag">Fretboard</span>Notes with interval labels missing from the table showed blank markers.</li>
+                <li><span class="rn-tag">Fretboard</span>The fretboard context menu mishandled flat keys.</li>
+                <li><span class="rn-tag">Fretboard</span>The piano keyboard ignored flat keys and swallowed the first click.</li>
+                <li><span class="rn-tag">Fretboard</span>Instrument dropdowns were added twice.</li>
+                <li><span class="rn-tag">Fretboard</span>Corrupt saved custom patterns crashed the app on start.</li>
+                <li><span class="rn-tag">Fretboard</span>Custom patterns containing invalid intervals crashed drawing.</li>
+                <li><span class="rn-tag">Fretboard</span>Corrupt saved collapsed-section state crashed the sidebar.</li>
+                <li><span class="rn-tag">Fretboard</span>The sidebar locked page scrolling on desktop; it now only does so on mobile.</li>
+                <li><span class="rn-tag">Audio</span>The synth started before any user gesture, triggering autoplay warnings and silence; it now starts on first use.</li>
+                <li><span class="rn-tag">Audio</span>Pressing Play repeatedly stacked overlapping playback.</li>
+                <li><span class="rn-tag">Audio</span>Ascending scales dropped back an octave part-way through.</li>
+                <li><span class="rn-tag">Audio</span>The Intervals page tried to play a non-existent file (C:/dummy.mp3); intervals now play melodically and harmonically with Web Audio.</li>
+                <li><span class="rn-tag">Slideshow</span>Calling a missing clearSlideshow function threw an error.</li>
+                <li><span class="rn-tag">Slideshow</span>Cloned thumbnails duplicated the #fretboard element id.</li>
+                <li><span class="rn-tag">Slideshow</span>A missing slideshow container crashed the player.</li>
+                <li><span class="rn-tag">Patterns</span>The pattern generator called scale and chord description functions that did not exist.</li>
+                <li><span class="rn-tag">Export</span>Image export hung forever because the theory engine was not passed to the exporter.</li>
+                <li><span class="rn-tag">Export</span>Image downloads silently failed in Firefox.</li>
+                <li><span class="rn-tag">Export</span>Pattern names with / : * ? characters produced invalid file names.</li>
+                <li><span class="rn-tag">Export</span>Exporter image load errors were uncaught, leaving exports stuck.</li>
+                <li><span class="rn-tag">Export</span>Exported canvases were mis-scaled and diagrams were clipped.</li>
+                <li><span class="rn-tag">Export</span>Long theory text overflowed exported images.</li>
+                <li><span class="rn-tag">Export</span>Exports crashed when an instrument tuning or pattern type was missing.</li>
+                <li><span class="rn-tag">Export</span>The Word exporters for intervals/circle and gamuts/circle of fifths were never loaded, so their menu items did nothing.</li>
+                <li><span class="rn-tag">Export</span>The Stop button was invisible during exports started from the dropdown.</li>
+                <li><span class="rn-tag">Export</span>"Export all diagrams only" left the side panels hidden afterwards.</li>
+                <li><span class="rn-tag">Export</span>The Export All button lost its label and width after running.</li>
+                <li><span class="rn-tag">Data page</span>Chord and scale tables never rendered (container id mismatch).</li>
+                <li><span class="rn-tag">Data page</span>Names were inserted as raw HTML.</li>
+                <li><span class="rn-tag">Data page</span>Corrupt saved data crashed the page.</li>
+                <li><span class="rn-tag">Data page</span>Excel import accepted malformed sheets and crashed.</li>
+                <li><span class="rn-tag">Data page</span>Edited formulas were not validated, allowing unknown intervals.</li>
+                <li><span class="rn-tag">Scales page</span>Corrupt favourites crashed the page.</li>
+                <li><span class="rn-tag">Scales page</span>The interval filter matched text instead of pitch (b3 did not find #2 scales).</li>
+                <li><span class="rn-tag">Scales page</span>Searching 1,066 scales re-computed every row on each keystroke; search is now instant.</li>
+                <li><span class="rn-tag">Chords page</span>Corrupt favourites crashed the page.</li>
+                <li><span class="rn-tag">Chords page</span>The Learn button did nothing.</li>
+                <li><span class="rn-tag">Chords page</span>The interval filter matched text instead of pitch.</li>
+                <li><span class="rn-tag">Intervals page</span>Enharmonic duplicates appeared and the list was not sorted by size.</li>
+                <li><span class="rn-tag">App links</span>?action=play and ?action=learn links from other pages were ignored.</li>
+                <li><span class="rn-tag">App links</span>Flat keys in links (key=Bb) were ignored.</li>
+                <li><span class="rn-tag">Settings</span>The default-key list did not match the app's keys.</li>
+                <li><span class="rn-tag">Settings</span>Backup only saved a few settings; it now backs up and restores all local data.</li>
+                <li><span class="rn-tag">Site</span>Every page requested a missing scales-data-advanced-9.js file.</li>
+                <li><span class="rn-tag">Site</span>Pages loaded libraries from CDNs and broke offline; all libraries are now bundled.</li>
+                <li><span class="rn-tag">Site</span>Several pages lacked a doctype, character set or mobile viewport.</li>
+                <li><span class="rn-tag">Site</span>Navigation differed from page to page and linked to placeholder pages.</li>
+                <li><span class="rn-tag">Progress</span>"Lessons explored" never counted lessons opened from the Lessons page.</li>
+                <li><span class="rn-tag">Lessons</span>The Edit Lesson button only showed a "coming soon" alert; it now opens a draft in Ideas &amp; Notes.</li>
+                <li><span class="rn-tag">Export</span>Exported image labels could not be configured and always showed every detail; empty labels are no longer drawn.</li>
+            </ol>
+        </section>
+
+        <section id="limitations">
+            <h2>Known limitations</h2>
+            <ul>
+                <li>Offline use needs one online visit over http(s). Opening the files directly from disk (file://) works, but cannot be cached for offline use or installed.</li>
+                <li>Data is stored per browser and per device; clearing site data deletes favourites, progress, notes and presets. There are no accounts or cloud sync - use Backup/Restore.</li>
+                <li>Spelling never uses double accidentals or Cb/Fb/E#/B#: F# major shows F for E#, and C diminished 7 shows A for Bbb.</li>
+                <li>Many catalogue scales are identified by their interval formula rather than a traditional name.</li>
+                <li>Browsers only allow sound after a tap or click, so links that "play" a pattern wait for your first tap. On iPhone the silent switch mutes the app.</li>
+                <li>Very large batch exports (every scale as Word/ZIP) can take minutes and may run out of memory on phones.</li>
+                <li>PDF text uses standard fonts, so symbols appear as b and # rather than musical flat/sharp glyphs.</li>
+                <li>There is no MIDI input, recording or notation view. MIDI export is output-only.</li>
+                <li>Quiz questions are generated at random; scores are kept locally and are not verified by a server.</li>
+            </ul>
+        </section>
+    </main>
+    <script src="vendor/jszip.min.js"></script>
+    <script src="offline-package.js"></script>
+    <script src="release-notes.js"></script>
+</body>
+</html>
